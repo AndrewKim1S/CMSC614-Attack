@@ -1,9 +1,11 @@
 
 from pwn import *
 
-e = ELF('./a.out')
+#e = ELF('./a.out')
+e = ELF('./target')
 libc = ELF('/usr/lib/x86_64-linux-gnu/libc.so.6')
-p = process('./a.out')
+#p = process('./a.out')
+p = process('./target')
 
 def write(idx, val):
 	p.sendlineafter(b'character:\n', b'b')

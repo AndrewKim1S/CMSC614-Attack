@@ -25,6 +25,7 @@ void arbitrary_write(struct A *job) {
 }
 
 int main(){
+  setuid(0);
   setvbuf(stdout, NULL, _IONBF, 0);
   setvbuf(stdin,  NULL, _IONBF, 0);
   struct A job;
